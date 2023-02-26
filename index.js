@@ -1,43 +1,51 @@
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
-let iphone = 2007;
-alert(iphone);
-let founder = 'Brendan Eich';
-alert(founder);
-let x = 10;
-let y = 2;
-alert(x + y);
-alert(x - y);
-alert(x * y);
-alert(x / y);
-let result = 2 ** 5;
-alert(result);
-a = 9;
-let b = 2;
-alert(a % b);
-let nam = 1;
-nam += 5;
-nam -= 3;
-nam *= 7;
-nam /= 3;
-nam++;
-nam--; 
-alert(nam);
-let age = Number (prompt("Сколько вам лет?"));
-alert(age);
-const user = {
-	name: 'Alina',
-	age: 21 ,
-    isAdmin: true
+// 1 задание
+
+let i = 0;
+while (i <= 2) {
+    console.log('Привет');
+ i++;   
+}
+
+// 2 задание
+
+r = 1;
+while (r <= 5) {
+    console.log(r);
+    r++;
+}
+
+// 3 задание
+
+a = 7;
+while (a <= 22) {
+    console.log(a);
+    a++;
+}
+
+// 4 задание
+
+const obj = {
+	'Коля':'200',
+    'Вася':'300',
+    'Петя':'400'
 };
-user['city of residence'] = 'Moscow';
-user.age = 23;
-delete user['city of residence'];
-let info = prompt("Что вы хотите узнать о пользователе?");
-alert(user[info]);
-let userName = prompt(("Введите ваше имя"));
-let greeting = 'Привет,';
-result = (greeting + userName + '!');
-alert(result);
+for (let salary in obj) {   
+    console.log('${obj[salary]} - зарплата  ${salary} долларов.');
+    }
+  
+// 5 задание  
+
+let n = 1000;
+let nam = 0;
+while (n>=50) {
+    n/=2;
+    nam++;
+    console.log(n);
+}
+
+// 6 задание
+
+for (let Friday = 5; Friday <= 31 ; Friday++) {
+    Friday += 7;
+    alert('Сегодня пятница, ${Friday} -е число. Необходимо подготовить отчет.');
+}

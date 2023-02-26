@@ -1,0 +1,35 @@
+@media (max-width: 767px)
+{ .center {padding-left: 16px;
+padding-right: 16px;}
+.header{
+    height: 735px;}
+.heading{width: 343px;
+    
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+&_text{font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    width: 343px;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+}}
+.button{margin-left: 54px;
+}
+.content{height: 1221px;
+    &_items{    display: flex;
+        gap: 32px;
+        flex-direction: column;
+        align-items: center;}
+    &_item{width: 343px;
+        height: 300px;} 
+    &_img{width: 343px;
+        height: 300px;}       
+}
+}
