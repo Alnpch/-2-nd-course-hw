@@ -62,9 +62,14 @@ body {
   border: none;
 }
 
+.button:hover {
+  background: #EB443F;
+  transition: all 0.3s;
+}
+
 .content {
   background-image: url(img/fon2.jpg);
-  height: 556px;
+  padding-bottom: 128px;
   padding-top: 128px;
 }
 
@@ -75,16 +80,22 @@ body {
 
 .content_img {
   position: absolute;
-  width: 379px;
+  width: 378px;
   height: 300px;
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%);
+  background: linear-gradient(180deg, rgba(39, 1, 15, 0) 0%, #001944 100%), url(0023.jpg);
 }
 
 .content_item {
   position: relative;
-  width: 379px;
+  width: 378px;
   height: 300px;
+}
+
+.content_item:hover {
+  border: 3px solid #44D2FF;
+  border-radius: 16px;
+  transition: all 0.3s;
 }
 
 .content_item span {
@@ -100,16 +111,45 @@ body {
   padding-top: 236px;
 }
 
+.gameOne {
+  background: #000915;
+  height: 800px;
+  display: flex;
+  gap: 135px;
+}
+.gameOne_img {
+  padding-top: 233px;
+  width: 485px;
+  height: 333px;
+}
+.gameOne_heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+.gameOne_content {
+  padding-top: 282px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
   }
   .header {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     height: 735px;
   }
   .heading {
     width: 343px;
+    height: 77px;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
@@ -130,9 +170,6 @@ body {
   .button {
     margin-left: 54px;
   }
-  .content {
-    height: 1221px;
-  }
   .content_items {
     display: flex;
     gap: 32px;
@@ -146,5 +183,29 @@ body {
   .content_img {
     width: 343px;
     height: 300px;
+  }
+  .gameOne {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    height: 654px;
+  }
+  .gameOne_img {
+    width: 344px;
+    height: 236px;
+    padding-top: 0rem;
+  }
+  .gameOne_content {
+    padding-top: 0rem;
+  }
+  .gameOne_heading {
+    padding-top: 51px;
+    padding-left: 44px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .button {
+    margin-top: 0rem;
   }
 }/*# sourceMappingURL=style.css.map */

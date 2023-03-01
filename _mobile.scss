@@ -1,10 +1,12 @@
 @media (max-width: 767px)
 { .center {padding-left: 16px;
 padding-right: 16px;}
-.header{
+.header{ display: flex;
+    flex-direction: column;
+    gap: 32px;
     height: 735px;}
 .heading{width: 343px;
-    
+    height: 77px;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
@@ -22,7 +24,7 @@ padding-right: 16px;}
 }}
 .button{margin-left: 54px;
 }
-.content{height: 1221px;
+.content{
     &_items{    display: flex;
         gap: 32px;
         flex-direction: column;
@@ -32,4 +34,21 @@ padding-right: 16px;}
     &_img{width: 343px;
         height: 300px;}       
 }
+.gameOne{display: flex;
+flex-direction: column;
+gap: 64px;
+height: 654px;
+&_img{
+width: 344px;
+height: 236px;
+padding-top: 0rem;}
+&_content{
+padding-top: 0rem;}
+&_heading{padding-top: 51px;
+    padding-left: 44px;
+font-weight: 700;
+font-size: 32px;
+line-height: 39px;}
+}
+.button{margin-top: 0rem;}
 }
