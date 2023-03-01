@@ -1,43 +1,91 @@
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
-let iphone = 2007;
-alert(iphone);
-let founder = 'Brendan Eich';
-alert(founder);
-let x = 10;
-let y = 2;
-alert(x + y);
-alert(x - y);
-alert(x * y);
-alert(x / y);
-let result = 2 ** 5;
-alert(result);
-a = 9;
-let b = 2;
-alert(a % b);
-let nam = 1;
-nam += 5;
-nam -= 3;
-nam *= 7;
-nam /= 3;
-nam++;
-nam--; 
-alert(nam);
-let age = Number (prompt("Сколько вам лет?"));
-alert(age);
-const user = {
-	name: 'Alina',
-	age: 21 ,
-    isAdmin: true
-};
-user['city of residence'] = 'Moscow';
-user.age = 23;
-delete user['city of residence'];
-let info = prompt("Что вы хотите узнать о пользователе?");
-alert(user[info]);
-let userName = prompt(("Введите ваше имя"));
-let greeting = 'Привет,';
-result = (greeting + userName + '!');
-alert(result);
+// задание 1
+function comparison(a, b) {
+    if (a <= b) {
+      return a;
+        
+    } else {
+      return b;
+    }
+}
+
+let result = comparison(4, 8);
+console.log(result);
+
+result = comparison(6, 6);
+console.log(result);
+
+//задание 2
+const calc = (a) => {
+    a % 2 == 0 ? console.log( 'Число четное') : console.log('Число нечетное' );   
+}
+calc(5);
+
+// задание 3
+const calсSquare = (b) => { 
+    result = b ** 2;
+    console.log(result);
+    return b ** 2;
+}   
+calсSquare(2);
+
+// задание 4
+
+const greeting = () => {
+    let userAnswer = (prompt('Сколько вам лет?'));
+    if (userAnswer < 0) {
+        alert('Вы ввели неправильное значение');   
+    } else if (userAnswer <= 12) {
+        alert('Привет, друг!');    
+    } else {
+     alert('Добро пожаловать!');  
+    }
+}
+greeting();
+
+// задание 5
+let a;
+let b;
+const checkNumber = (a, b) => {
+    if (!isNaN(a) && !isNaN(b)) {
+        return  console.log(a * b);
+    } else {
+        return console.log('Одно или оба значения не являются числом'); 
+    } 
+}
+checkNumber(4, 4);
+checkNumber(4, 'four');
+
+// задание 6
+const userInteraction = () => {
+    let request  = (prompt('Введите число'));
+
+    if (!isNaN(request)) {
+        return alert(`${request} в кубе равняется ${request ** 3} `);
+        
+    } else {
+        return alert('Переданный параметр не является числом');
+    }
+}
+userInteraction();
+
+// задание 7
+const checkSeason = () => {
+    let n =(prompt('Введите номер месяца (от 1 до 12)'));
+
+    if (n <= 0 || isNaN(n) || n >= 13 ) {
+        return alert('Упс, такого месяца не сущесвует');
+
+    } else if (n <= 2 || n == 12 && !isNaN(n) ) {
+      return alert('Зима'); 
+
+    } else if (n <= 5 && !isNaN(n)) {
+        return alert('Весна'); 
+
+    } else if (n <= 8 && !isNaN(n)) {
+        return alert('Лето');
+
+    } else if (n <= 11 && !isNaN(n)) {
+        return alert('Осень');
+
+    } 
+}
