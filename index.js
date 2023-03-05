@@ -1,91 +1,99 @@
-// задание 1
-function comparison(a, b) {
-    if (a <= b) {
-      return a;
-        
-    } else {
-      return b;
-    }
+// Задание 1
+
+const numbs = [1, 5, 4, 10, 0, 3];
+
+for (let i = 0; i < numbs.length; i++) {
+    if (numbs[i] == 10) break;
+    console.log(numbs[i]);
 }
 
-let result = comparison(4, 8);
-console.log(result);
+// Задание 2
 
-result = comparison(6, 6);
-console.log(result);
+const position = [1, 5, 4, 10, 0, 3];
+ console.log(position.indexOf(4));
+    
+  // Задание 3
 
-//задание 2
-const calc = (a) => {
-    a % 2 == 0 ? console.log( 'Число четное') : console.log('Число нечетное' );   
-}
-calc(5);
+ let value = [1, 3, 5, 10, 20];
+ 
+ value = value.join(' ');
+ console.log(value);
+ 
+ // Задание 4
 
-// задание 3
-const calсSquare = (b) => { 
-    result = b ** 2;
-    console.log(result);
-    return b ** 2;
-}   
-calсSquare(2);
+ let arr = [];
 
-// задание 4
+ for (let a = 0; a < 3; a++) {
+  arr.push([1, 1, 1]);
+  arr.join(',');    
+ }
+ console.log(arr);
+ 
+// Задание 5
 
-const greeting = () => {
-    let userAnswer = (prompt('Сколько вам лет?'));
-    if (userAnswer < 0) {
-        alert('Вы ввели неправильное значение');   
-    } else if (userAnswer <= 12) {
-        alert('Привет, друг!');    
-    } else {
-     alert('Добро пожаловать!');  
-    }
-}
-greeting();
+arr = [1, 1, 1];
 
-// задание 5
-let a;
-let b;
-const checkNumber = (a, b) => {
-    if (!isNaN(a) && !isNaN(b)) {
-        return  console.log(a * b);
-    } else {
-        return console.log('Одно или оба значения не являются числом'); 
-    } 
-}
-checkNumber(4, 4);
-checkNumber(4, 'four');
+arr.push(2, 2, 2);
+console.log(arr);
 
-// задание 6
-const userInteraction = () => {
-    let request  = (prompt('Введите число'));
+// Задание 6
 
-    if (!isNaN(request)) {
-        return alert(`${request} в кубе равняется ${request ** 3} `);
-        
-    } else {
-        return alert('Переданный параметр не является числом');
-    }
-}
-userInteraction();
+arr = [9, 8, 7, 'a', 6, 5];
 
-// задание 7
-const checkSeason = () => {
-    let n =(prompt('Введите номер месяца (от 1 до 12)'));
+arr.sort();
+arr.pop();
+console.log(arr);
 
-    if (n <= 0 || isNaN(n) || n >= 13 ) {
-        return alert('Упс, такого месяца не сущесвует');
+// Задание 7
 
-    } else if (n <= 2 || n == 12 && !isNaN(n) ) {
-      return alert('Зима'); 
+const number = [9, 8, 7, 6, 5];
 
-    } else if (n <= 5 && !isNaN(n)) {
-        return alert('Весна'); 
+let userNumber = (prompt('Введите число от 1 до 10'));
+let search = number.includes(+ userNumber );
+console.log(search);
 
-    } else if (n <= 8 && !isNaN(n)) {
-        return alert('Лето');
+// Задание 8
 
-    } else if (n <= 11 && !isNaN(n)) {
-        return alert('Осень');
+ let rev = 'abcdef';
 
-    } 
-}
+rev = rev.split('');
+rev = rev.reverse();
+rev = rev.join('');
+ console.log(rev);
+  
+// Задание 9
+
+ arr = [
+    [1, 2, 3,],
+    [4, 5, 6]
+]
+let arrayFirst = [1, 2, 3,];
+let arraySecond =[4, 5, 6];
+const newArray = arrayFirst.concat(arraySecond);
+console.log(newArray);
+
+
+ // Задание 10
+
+ arrSum = [2, 4, 6, 8];
+ for(let d = 0; d < arrSum.length ; d++ ) { 
+    if (arrSum[d] == 8) break;
+    console.log(arrSum[d + 1] + arrSum[d]);
+ }
+
+ // Задание 11
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let random = arr[Math.floor(Math.random() * arr.length)];
+console.log(arr);
+const even = arr.filter(el => el % 2 === 0);
+console.log(even);
+
+
+// Задание 12
+arr = [1, 2, 3, 4, 5, 6];
+
+random = arr[Math.floor(Math.random() * arr.length)];
+const sum = arr.reduce((a, b) => (a +b)) / arr.length;
+console.log(sum);
