@@ -1,99 +1,129 @@
 // Задание 1
 
-const numbs = [1, 5, 4, 10, 0, 3];
-
-for (let i = 0; i < numbs.length; i++) {
-    if (numbs[i] == 10) break;
-    console.log(numbs[i]);
-}
+let m = 'js';
+console.log(m.toUpperCase());
 
 // Задание 2
+const animals = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+const search = 'ко';
+animals.forEach(animal => {
+    if (animal.toLowerCase().includes(search.toLowerCase())) {
+        
+	console.log([animal]);
+	}  
+ });
 
-const position = [1, 5, 4, 10, 0, 3];
- console.log(position.indexOf(4));
-    
-  // Задание 3
+// Задание 3
 
- let value = [1, 3, 5, 10, 20];
- 
- value = value.join(' ');
- console.log(value);
- 
- // Задание 4
+let value = 32.58884;
+console.log(Math.floor(value));
+console.log(Math.ceil(value));
+console.log(Math.round(value));
 
- let arr = [];
 
- for (let a = 0; a < 3; a++) {
-  arr.push([1, 1, 1]);
-  arr.join(',');    
- }
- console.log(arr);
- 
+// Задание 4
+
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+console.log(Math.max(52, 53, 49, 77, 21, 32));
+
 // Задание 5
-
-arr = [1, 1, 1];
-
-arr.push(2, 2, 2);
-console.log(arr);
+const random = () => {
+    return Math.round(Math.random() * (10 - 1)) + 1;
+}
+console.log(random());
 
 // Задание 6
+const getRandomArrNumbers = (randomNumber) => {
+    let sixthArray = [];
+    let arrLength = Math.round(randomNumber / 2)
+    for (let i = 0; i < arrLength; i++) {
+    sixthArray.push(Math.round(Math.random() * randomNumber));    
+}
+    console.log(sixthArray);
 
-arr = [9, 8, 7, 'a', 6, 5];
+}    
 
-arr.sort();
-arr.pop();
-console.log(arr);
+(getRandomArrNumbers(8));
 
 // Задание 7
 
-const number = [9, 8, 7, 6, 5];
-
-let userNumber = (prompt('Введите число от 1 до 10'));
-let search = number.includes(+ userNumber );
-console.log(search);
+const randomValue = (a, b) => {
+    return Math.round(Math.random() * (a - b)) + b;
+}
+console.log(randomValue(5, 10));
 
 // Задание 8
 
- let rev = 'abcdef';
+let myDate = new Date();
+console.log(myDate); 
 
-rev = rev.split('');
-rev = rev.reverse();
-rev = rev.join('');
- console.log(rev);
-  
 // Задание 9
 
- arr = [
-    [1, 2, 3,],
-    [4, 5, 6]
-]
-let arrayFirst = [1, 2, 3,];
-let arraySecond =[4, 5, 6];
-const newArray = arrayFirst.concat(arraySecond);
-console.log(newArray);
+let currentDate = new Date();
+currentDate.setDate(73);
+console.log(currentDate);
+
+// Задание 10
+
+myDate = new Date();
+const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+ "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+ const date = () => {
+   return   myDate.getDate() + " " + months[myDate.getMonth()] +
+ " " + myDate.getFullYear() + " - это " + days[myDate.getDay()] +
+ " " + myDate.getHours() + " часов" + " " + myDate.getMinutes() + " минут" +
+  " " + myDate.getSeconds()+ " секунд";
+ 
+     
+ }
+ console.log(date());
+
+// задания к сайту
+const checkSeason = () => {
+    let n =(prompt('Введите номер месяца (от 1 до 12)'));
+
+    if (n <= 0 || isNaN(n) || n >= 13 ) {
+        return alert('Упс, такого месяца не сущесвует');
+
+    } else if (n <= 2 || n == 12 && !isNaN(n) ) {
+      return alert('Зима'); 
+
+    } else if (n <= 5 && !isNaN(n)) {
+        return alert('Весна'); 
+
+    } else if (n <= 8 && !isNaN(n)) {
+        return alert('Лето');
+
+    } else if (n <= 11 && !isNaN(n)) {
+        return alert('Осень');
+
+    } 
+}
 
 
- // Задание 10
+// задание 11
+const checkFruits = () => {
+  
+let list =['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+list = list.sort(() => Math.random() - 0.5);
+alert(`Запомните порядок элементов ${ list}`);
 
- arrSum = [2, 4, 6, 8];
- for(let d = 0; d < arrSum.length ; d++ ) { 
-    if (arrSum[d] == 8) break;
-    console.log(arrSum[d + 1] + arrSum[d]);
+let userAnswer =(prompt('Чему равнялся первый элемент массива?'));
+let userAnswerTwo = (prompt('Чему равнялся последний элемент массива?'));
+
+if (userAnswer.toLowerCase() == list[0].toLowerCase() && userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+    alert('Поздравляю, вы угадали оба элемента');
+} else if (userAnswer.toLowerCase() == list[0].toLowerCase() || userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+    alert('Вы были близки к победе!'); 
+} else {
+alert('Вы не угадали ни одного элемента');
+    
+}
  }
 
- // Задание 11
-
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-let random = arr[Math.floor(Math.random() * arr.length)];
-console.log(arr);
-const even = arr.filter(el => el % 2 === 0);
-console.log(even);
 
 
-// Задание 12
-arr = [1, 2, 3, 4, 5, 6];
 
-random = arr[Math.floor(Math.random() * arr.length)];
-const sum = arr.reduce((a, b) => (a +b)) / arr.length;
-console.log(sum);
