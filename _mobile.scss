@@ -3,6 +3,7 @@
 padding-right: 16px;}
 .header{ display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     height: 735px;}
 .heading{width: 343px;
@@ -22,8 +23,7 @@ padding-right: 16px;}
     text-align: center;
     padding-top: 0;
 }}
-.button{margin-left: 54px;
-}
+
 .content{
     &_items{    display: flex;
         gap: 32px;
@@ -36,16 +36,19 @@ padding-right: 16px;}
 }
 .gameOne{display: flex;
 flex-direction: column;
+align-items: center;
 gap: 64px;
 height: 654px;
+
 &_img{
 width: 344px;
 height: 236px;
 padding-top: 0rem;}
-&_content{
+
+&_content{align-items: center;
 padding-top: 0rem;}
+
 &_heading{padding-top: 51px;
-    padding-left: 44px;
 font-weight: 700;
 font-size: 32px;
 line-height: 39px;}

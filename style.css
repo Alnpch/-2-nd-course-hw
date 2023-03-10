@@ -136,7 +136,6 @@ body {
   gap: 32px;
 }
 
-
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
@@ -145,6 +144,7 @@ body {
   .header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     height: 735px;
   }
@@ -168,9 +168,6 @@ body {
     text-align: center;
     padding-top: 0;
   }
-  .button {
-    margin-left: 54px;
-  }
   .content_items {
     display: flex;
     gap: 32px;
@@ -188,6 +185,7 @@ body {
   .gameOne {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 64px;
     height: 654px;
   }
@@ -197,11 +195,11 @@ body {
     padding-top: 0rem;
   }
   .gameOne_content {
+    align-items: center;
     padding-top: 0rem;
   }
   .gameOne_heading {
     padding-top: 51px;
-    padding-left: 44px;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
