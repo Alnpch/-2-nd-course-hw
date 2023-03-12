@@ -48,15 +48,10 @@ const arrRevers = () => {
 
 const toNumberArr = () => {
     const arr = [1, '4', false, 9, 'two'];
-    result = arr.map(el => (Number(el)));
-  
-    const arrResult = result.filter(el => el  == !isNaN);
-
+    const result = arr.map(el => (Number(el)));
+    const resultFilter = result.filter(el => !isNaN(el));
     
-  
-   
-    
-    console.log(arrResult);
+    console.log(resultFilter);
 }
 each(arrRevers);
 each(toNumberArr);
