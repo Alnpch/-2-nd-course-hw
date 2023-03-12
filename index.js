@@ -1,20 +1,20 @@
 // задание 1
-const getResult = (callback) => {
-    let arr =[2, 3];
-    callback();
+ const getResult = ( arr, callback) => {
+    
+     callback(arr);
   
-}
-const sum = () => {
-    let arr =[2, 3, 4];
-console.log(arr.reduce((a, b) => a + b)); 
-}
-const mult = () => {
-    let arr =[2, 3, 4];
-console.log( arr.reduce((a, b) => a * b));
-}
+ }
+ const sum = (arr) => {
+    
+ console.log(arr.reduce((a, b) => a + b)); 
+ }
+ const mult = (arr) => {
+     
+ console.log( arr.reduce((a, b) => a * b));
+ }
 
-getResult(sum);
-getResult(mult);
+ getResult([2, 3, 4], sum);
+ getResult([2, 3, 4], mult);
 
 // задание 2
 
@@ -35,20 +35,28 @@ console.log(users);
 // задание 3
 
 
+
 const each = (callback) => {
   callback();   
+   
 }
+
 const arrRevers = () => {
     const arr = [1, '4', 9, 'two'];
    console.log(arr.reverse());   
 }
+
 const toNumberArr = () => {
     const arr = [1, '4', false, 9, 'two'];
     result = arr.map(el => (Number(el)));
   
+    const arrResult = result.filter(el => el  == !isNaN);
+
+    
+  
    
     
-    console.log(result);
+    console.log(arrResult);
 }
 each(arrRevers);
 each(toNumberArr);
