@@ -1,43 +1,96 @@
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
-let iphone = 2007;
-alert(iphone);
-let founder = 'Brendan Eich';
-alert(founder);
-let x = 10;
-let y = 2;
-alert(x + y);
-alert(x - y);
-alert(x * y);
-alert(x / y);
-let result = 2 ** 5;
-alert(result);
-a = 9;
-let b = 2;
-alert(a % b);
-let nam = 1;
-nam += 5;
-nam -= 3;
-nam *= 7;
-nam /= 3;
-nam++;
-nam--; 
-alert(nam);
-let age = Number (prompt("Сколько вам лет?"));
-alert(age);
-const user = {
-	name: 'Alina',
-	age: 21 ,
-    isAdmin: true
+// задание 1
+ const getResult = ( arr, callback) => {
+    
+     callback(arr);
+  
+ }
+ const sum = (arr) => {
+    
+ console.log(arr.reduce((a, b) => a + b)); 
+ }
+ const mult = (arr) => {
+     
+ console.log( arr.reduce((a, b) => a * b));
+ }
+
+ getResult([2, 3, 4], sum);
+ getResult([2, 3, 4], mult);
+
+// задание 2
+
+const users = [
+	{name: 'Jon', age: 22},
+	{name: 'Richard', age: 18},
+	{name: 'Anton', age: 32},
+	{name: 'Lida', age: 23},
+	{name: 'Bob', age: 44}
+];
+ 
+const getSortedArrayObj = (a, b) => {
+   return (a.age - b.age)
+}
+users.sort(getSortedArrayObj); 
+console.log(users);
+
+// задание 3
+
+
+
+const each = (callback) => {
+  callback();   
+   
+}
+
+const arrRevers = () => {
+    const arr = [1, '4', 9, 'two'];
+   console.log(arr.reverse());   
+}
+
+const toNumberArr = () => {
+    const arr = [1, '4', false, 9, 'two'];
+    const result = arr.map(el => (Number(el)));
+    const resultFilter = result.filter(el => !isNaN(el));
+    
+    console.log(resultFilter);
+}
+each(arrRevers);
+each(toNumberArr);
+
+// задание 4
+
+
+const timer = (myDate) => {
+    myDate = new Date();
+    console.log(myDate);
+    const idInterval = setInterval(() => {
+        myDate = new Date();
+        console.log(myDate);
+    }, 3000);
+    setTimeout(() => {
+        clearInterval(idInterval);
+        console.log('30 секунд прошло');
+    }, 30000); 
+}
+timer();
+
+// задание 5
+
+function calling() {
+    console.log('Звоню!')
 };
-user['city of residence'] = 'Moscow';
-user.age = 23;
-delete user['city of residence'];
-let info = prompt("Что вы хотите узнать о пользователе?");
-alert(user[info]);
-let userName = prompt(("Введите ваше имя"));
-let greeting = 'Привет,';
-result = (greeting + userName + '!');
-alert(result);
+
+function beeps(callback) {
+    setTimeout(() => {
+        console.log('Идут гудки...');
+        callback();
+    }, 1000);
+};
+
+function talk() {
+    console.log('Разговор');
+    
+};
+calling();
+beeps(talk);
+
+
